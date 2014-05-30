@@ -1,0 +1,80 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">appointmentMaker</h3>
+</div>
+	<div ng-controller="SubmitCtrl">
+	<form class="form-horizontal" role="form">
+
+	  <div class="form-group">
+	    <label for="date" class="col-sm-2 control-label">Date</label>
+	    <div class="col-sm-10">
+	      <input type="date" class="form-control" id="date" ng-model="potentialGig.date">
+	      <!-- TODO: add required to this input -->
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="time" class="col-sm-2 control-label">Set Time</label>
+	    <div class="col-sm-10">
+	      <input type="time" class="form-control" id="time" placeholder="What time does our set start?" ng-model="potentialGig.time">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="pay" class="col-sm-2 control-label">Pay</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="pay" placeholder="$" ng-model="potentialGig.pay">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="venue" class="col-sm-2 control-label">Venue</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="venue" placeholder="Where?" ng-model="potentialGig.venue">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="soundcheck" class="col-sm-2 control-label">Soundcheck</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="soundcheck" placeholder="What time is soundcheck?" ng-model="potentialGig.soundcheck">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="details" class="col-sm-2 control-label">Details</label>
+	    <div class="col-sm-10">
+	      <textarea class="form-control" id="details" placeholder="Tell us about openers, headliners, age restrictions or anything else you think we should know." ng-model="potentialGig.details"></textarea>
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <div class="checkbox">
+	        <label>
+	          <input type="checkbox"> Remember me
+	        </label>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <button type="submit" class="btn btn-default" ng-click="submit(potentialGig)">Submit!</button>
+	    </div>
+	  </div>
+
+	</form>
+
+	<pre>form = {{potentialGig | json}}</pre>
+	<pre>submitted = {{submittedGig | json}}</pre>
+	</div>
+
+
+<div class="footer">
+  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+</div>

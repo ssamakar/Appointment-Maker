@@ -1,0 +1,19 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">appointmentMaker</h3>
+</div>
+	<div ng-controller="PendingCtrl">
+	<h3>These shows are awaiting your approval.</h3>
+	
+	<div ng-repeat="gig in gigs">{{gig.time}}</div>
+	</div>
+
+
+
+<div class="footer">
+  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+</div>
